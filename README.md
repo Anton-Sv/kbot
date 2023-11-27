@@ -8,7 +8,7 @@ To try with your own account you need to add specific token from BotFather:
 - ***export TELE_TOKEN=add_your_token***: export your token value into the local env
 
 ## Installation process
-- First you need to clone github repo with ***git clone https://github.com/username/kbot.git***
+- First you need to clone github repo with ***git clone https://github.com/anton-sv/kbot.git***
 - Go to newly created folder with ***cd kbot***
 - Build the project locally with ***go build -o kbot*** (you will see kbot binary file in the folder tree)
 
