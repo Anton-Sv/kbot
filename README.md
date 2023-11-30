@@ -10,8 +10,8 @@ To try with your own account you need to add specific token from BotFather:
 ## Installation process
 - First you need to clone github repo with ***git clone https://github.com/anton-sv/kbot.git***
 - Go to newly created folder with ***cd kbot***
-- Build the project locally with ***go build -o kbot*** (you will see kbot binary file in the folder tree)
+- To build local image type ***make image***.
 
 ## How to use
-- To start your bot type ***./kbot start***
+- To start your bot locally type ***docker run YOUR_IMAGE start***
 - By providing commands inside Telegram bot page you will receive answers and logs in local console.
