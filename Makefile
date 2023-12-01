@@ -1,4 +1,5 @@
 APP=$(shell basename $(shell git remote get-url origin) .git)
+LATEST_IMAGE=$(shell docker images -q | awk '{print $1}' | awk 'NR==1')
 REGISTRY=europe-west1-docker.pkg.dev/k8s-k3s-406521/k8s-repo
 TARGETOS=linux
 TARGETARCH=amd64
@@ -9,6 +10,7 @@ build: format get
 
 clean:
 	rm -rf kbot
+	docker rmi -f ${LATEST_IMAGE}
 
 format:
 	gofmt -s -w ./
