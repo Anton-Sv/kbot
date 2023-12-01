@@ -10,7 +10,7 @@ build: format get
 
 clean:
 	rm -rf kbot
-	docker rmi -f ${LATEST_IMAGE}
+	docker rmi ${LATEST_IMAGE}
 
 format:
 	gofmt -s -w ./
@@ -19,7 +19,7 @@ get:
 	go get
 
 image:
-	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 lint:
 	golangci-lint run
@@ -37,7 +37,7 @@ windows:
 	$(MAKE) TARGETOS=windows TARGETARCH=amd64 build image
 
 push:
-	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 push-arm:
 	$(MAKE) TARGETOS=darwin TARGETARCH=arm64 push
