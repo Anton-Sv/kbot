@@ -12,7 +12,7 @@ image:
 secret:
   name: "kbot"
   key: "token"
-  env: TELE_TOKEN
+  env: "TELE_TOKEN"
 securityContext:
   privileged: true
 
