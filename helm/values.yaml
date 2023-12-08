@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: "toxa2202"
-  tag: "v1.0.2-8cf6fed"
+  tag: "v1.0.3-6308504"
   arch: amd64
 
 secret:
